@@ -1,2 +1,2 @@
-def name():
+def name_ipek():
     print("İpek")
