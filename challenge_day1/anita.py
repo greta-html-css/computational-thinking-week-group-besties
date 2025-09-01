@@ -1,2 +1,2 @@
 def fie():
-  print("anita")
+  return "Anita"

@@ -1,2 +1,2 @@
 def name_ipek():
-    print("İpek")
+    return "Ipek"
