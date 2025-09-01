@@ -1,2 +1,2 @@
-def name():
-  print("Bassant")
+def name_bassant():
+  return "Bassant"
