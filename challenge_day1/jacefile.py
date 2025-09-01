@@ -1,2 +1,2 @@
-def name():
-    print("Jace")
+def name_jace():
+    return "Jace"
