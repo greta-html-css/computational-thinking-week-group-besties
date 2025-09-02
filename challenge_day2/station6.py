@@ -1,48 +1,32 @@
 import math
-
-def solution_station_6(numbers):
-    # def sin_taylor(x):
-        # pi = 3.141592653589793
-        # while x > 2 * pi:
-            # x -= 2 * pi
-        # while x < -2 * pi:
-            # x += 2 * pi
-        
-        # result = 0
-        # term = x
-        # n = 1
-        # for i in range(15):
-            # result += term
-            # term *= -x * x / (n * (n + 1))
-            # n += 2
-        
-        # return result
-
-    def sin_taylor(x):
-        pi = 3.141592653589793
-        while x > 2 * pi:
-            x -= 2 * pi
-        while x < -2 * pi:
-            x += 2 * pi
-
-        result = 0
-        term = x
-    
-        for i in range(1, 16): 
-            result += term
-            term *= -x * x / ((2 * i) * (2 * i + 1))
-        
-        return result
-
-    
-    results = []
-    for num in numbers:
-        results.append(sin_taylor(num))
-    return results
-
-#sample input, sample output, input
-#2.2, 52, 0.8085
-#0.3, 21, 0.2955
-#1.4, 66, 0.9854
-#1.6, 12, 0.996
-#0.7, 45, 0.6442
+2
+def station_output(x: float) → float:
+'Calculate the output as sine of the input (in radians).".™
+return math.sin(x)
+# Given observations:
+observations = [
+(0.3, 0.2955, 21),
+# sample_in, sample_out, input
+10
+(1.4,
+0.9854, 66),
+11
+(1.6, 0.9996, 12),
+12
+13
+14
+15
+16
+17
+18
+19
+20
+if _name_
+= "_main_":
+for sample_in, sample_out, real_input in observations:
+expected _sample = station_output (sample_in)
+real_output = station6_output(real_input)
+print(f"Sample In: {sample_in} | Sample Out:
+{sample_out} (calc (expected_sample: .4f})")
+print(f"Input: (real_input} | Output: {real_output:.4f}")
+print("-" * 50)
