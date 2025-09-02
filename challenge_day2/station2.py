@@ -17,7 +17,7 @@ from station2 import solution_station_2
 
 def solution_station_2(d):
     # Using Zeller’s Congruence to figure out the day of the week
-    q, m, y = map(int, d.split())  # day, month, year
+    q, m, y = map(int, d.split('-'))  # day, month, year
 
     if m < 3:   
         m += 12
