@@ -29,7 +29,7 @@ j = y // 100 # century
 h = (q + (13 * (m + 1)) // 5 + k + k // 4 + j // 4 + 5 * j) % 7  
 wd = ['土曜E (Saturday)', '日曜日 (Sunday)', '月曜日 (Monday)', '火曜日 (Tuesday)', '水曜日 (Wednesday)', '木曜日 (Thursday)', '金曜且 (Friday)']
 
-print(wd[h])
+return(wd[h])
 
 # Station 5 - Simultanious Observstions
 # 10:23:00, "Yang Yang", 4, "Madeleine"
