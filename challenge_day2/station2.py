@@ -12,8 +12,7 @@
 # 09:43:32, 2023-11-07, "火曜日 (Tuesday)", 2024-06-09
 # 09:43:44, 2023-07-24,"月曜日 (Monday)", 2024-06-25
 
-from tests import tests
-from station2 import solution_station_2
+
 
 def solution_station_2(d):
     # Using Zeller’s Congruence to figure out the day of the week

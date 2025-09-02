@@ -1,7 +1,7 @@
-from tests import tests
-from station1 import solution_station_1
+
 
 def solution_station_1(n):
+    a, b = 0, 1
     for _ in range(2, n):
         a, b = b, a + b
     return b
