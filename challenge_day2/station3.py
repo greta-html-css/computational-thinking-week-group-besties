@@ -9,3 +9,4 @@
 #21 True 67847
 #53 False 22212
 
+#If number (input) is divisible by 3 it's true otherwise false. 
