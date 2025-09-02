@@ -9,3 +9,4 @@ from station1 import solution_station_1
 #38,25,39088169,?
 #54,77,86267571272,?
 #Fibinachi sequence 
+#Potential Fibonacci Function F(n)=F(n-1)+F(n-2)
