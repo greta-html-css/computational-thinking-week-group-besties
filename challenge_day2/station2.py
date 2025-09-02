@@ -15,21 +15,22 @@
 from tests import tests
 from station2 import solution_station_2
 
-# Using Zeller’s Congruence to figure out the day of the week
-d = input_date
-q, m, y = map(int, d.split())  # day, month, year
+def solution_station_2(d):
+    # Using Zeller’s Congruence to figure out the day of the week
+    d = input_date
+    q, m, y = map(int, d.split())  # day, month, year
 
-if m < 3:   
-    m += 12
-    y -= 1
+    if m < 3:   
+        m += 12
+        y -= 1
 
-k = y % 100  # yearpart
-j = y // 100 # century
+    k = y % 100  # yearpart
+    j = y // 100 # century
 
-h = (q + (13 * (m + 1)) // 5 + k + k // 4 + j // 4 + 5 * j) % 7  
-wd = ['土曜E (Saturday)', '日曜日 (Sunday)', '月曜日 (Monday)', '火曜日 (Tuesday)', '水曜日 (Wednesday)', '木曜日 (Thursday)', '金曜且 (Friday)']
+    h = (q + (13 * (m + 1)) // 5 + k + k // 4 + j // 4 + 5 * j) % 7  
+    wd = ['土曜E (Saturday)', '日曜日 (Sunday)', '月曜日 (Monday)', '火曜日 (Tuesday)', '水曜日 (Wednesday)', '木曜日 (Thursday)', '金曜且 (Friday)']
 
-return(wd[h])
+    return(wd[h])
 
 # Station 5 - Simultanious Observstions
 # 10:23:00, "Yang Yang", 4, "Madeleine"
