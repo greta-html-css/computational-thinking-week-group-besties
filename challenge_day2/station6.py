@@ -11,10 +11,9 @@ def solution_station_6(numbers):
         result = 0
         term = x
         n = 1
-        
         for i in range(15):
             result += term
-            term *= -x * x / ((n + 1) * (n + 2))
+            term *= -x * x / (n * (n + 1))
             n += 2
         
         return result
