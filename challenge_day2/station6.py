@@ -1,26 +1,15 @@
 import math
-2
+
 def station_output(x: float) → float:
 'Calculate the output as sine of the input (in radians).".™
 return math.sin(x)
 # Given observations:
-observations = [
-(0.3, 0.2955, 21),
-# sample_in, sample_out, input
-10
-(1.4,
-0.9854, 66),
-11
+observations = [(0.3, 0.2955, 21),
+# sample_in, sample_out, input10
+(1.4, 0.9854, 66),11
 (1.6, 0.9996, 12),
-12
-13
-14
-15
-16
-17
-18
-19
-20
+
+
 if _name_
 = "_main_":
 for sample_in, sample_out, real_input in observations:
