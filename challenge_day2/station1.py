@@ -1,5 +1,10 @@
 from tests import tests
 from station1 import solution_station_1
+
+def solution_station_1(n):
+    for _ in range(2, n):
+        a, b = b, a + b
+    return b
 #sample input, intput, sample output, output
 #96, 9, 1680708854858330000, ?
 #20,79,6765, ?
