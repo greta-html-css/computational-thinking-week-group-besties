@@ -11,7 +11,7 @@ SummaryMetaTable = {
 
 -- Read data from `data4.txt`
 local lines = {}
-for line in io.lines("challenge_day4/testdata/data4.txt") do
+for line in io.lines("challenge_day4/julia_step3/data4.csv") do
     table.insert(lines, line)
 end
 
@@ -49,7 +49,7 @@ for _, line in ipairs(lines) do
 end
 
 -- Write data to `data5.txt`
-local out = io.open("challenge_day4/testdata/data5.txt", "w")
+local out = io.open("challenge_day4/lua/data5.csv", "w")
 out:write("Name,Technical Skills,Soft Skills,Business Skills,Creative Skills,Academic Skills,Summary\n")
 for _, entry in ipairs(people) do
     out:write(table.concat(entry, ',') .. "\n")
