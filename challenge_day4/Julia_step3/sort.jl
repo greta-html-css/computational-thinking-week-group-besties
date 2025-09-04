@@ -1,7 +1,7 @@
 using DataFrames, CSV, Statistics, DelimitedFiles
 
 # Read the CSV file into a DataFrame
-people_df = CSV.File("data3.csv") |> DataFrame
+people_df = CSV.File("greta-html-css/computational-thinking-week-group-besties/challenge_day4/Go_step2/data3.csv") |> DataFrame
 
 # Function to classify a score based on quartiles
 function classify_score(score, quartiles)
