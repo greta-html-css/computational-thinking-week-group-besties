@@ -1,10 +1,11 @@
+
 import java.nio.file.{Files, Paths}
 import scala.util.Try
 
 object Main {
   def main(args: Array[String]): Unit = {
     val filePath = "data6.txt"
-    val lines = scala.io.Source.fromFile(filePath).getLines().toList
+    val lines = scala.io.Source.fromFile("/Users/gretapfeiffer/Desktop/computational-thinking-week-group-besties-2/challenge_day4/testdata/data6.txt").getLines().toList
     val outputLines = lines.zipWithIndex.map {
       case (line, 0) => s"$line,Comments"
       case (line, _) =>
@@ -23,6 +24,6 @@ object Main {
         }
     }
 
-    Files.write(Paths.get("data7.txt"), output_each_Lines.mkString("\n").getBytes)
+    Files.write(Paths.get("data7.txt"), outputLines.mkString("\n").getBytes)
   }
 }
