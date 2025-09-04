@@ -11,7 +11,11 @@ SummaryMetaTable = {
 
 -- Read data from `data4.txt`
 local lines = {}
+<<<<<<< HEAD
 for line in io.lines("challenge_day4/Julia_step3/data4.csv") do
+=======
+for line in io.lines("challenge_day4/julia_step3/data4.csv") do
+>>>>>>> refs/remotes/origin/main
     table.insert(lines, line)
 end
 
@@ -49,12 +53,16 @@ for _, line in ipairs(lines) do
 end
 
 -- Write data to `data5.txt`
+<<<<<<< HEAD
 local out, err = io.open("challenge_day4/Lua_step4/data5.csv", "w")
 if not out then
     print("Error: " .. tostring(err))
     os.exit(1) -- stop the script
 end
 
+=======
+local out = io.open("challenge_day4/lua/data5.csv", "w")
+>>>>>>> refs/remotes/origin/main
 out:write("Name,Technical Skills,Soft Skills,Business Skills,Creative Skills,Academic Skills,Summary\n")
 
 for _, entry in ipairs(people) do
