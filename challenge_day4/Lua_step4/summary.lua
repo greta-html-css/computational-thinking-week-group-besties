@@ -1,5 +1,5 @@
 -- Create a Metatable
-ummaryMetaTable = {
+SummaryMetaTable = {
     __add = function (left, right)
         local newSummary = {super=0, good=0, middle=0, low=0}
         for k, v in pairs(left) do
