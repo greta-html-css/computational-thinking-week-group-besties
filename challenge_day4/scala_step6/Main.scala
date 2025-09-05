@@ -4,24 +4,40 @@ import scala.util.Try
 
 object Main {
   def main(args: Array[String]): Unit = {
-    val filePath = "data6.txt"
-    val lines = scala.io.Source.fromFile("/Users/gretapfeiffer/Desktop/computational-thinking-week-group-besties/challenge_day4/Rust_step5/data6.txt").getLines().toList
+    val filePath = "/Users/gretapfeiffer/Desktop/computational-thinking-week-group-besties/challenge_day4/Rust_step5/data6.txt"
+    val lines = scala.io.Source.fromFile(filePath).getLines().toList
+
     val outputLines = lines.zipWithIndex.map {
-      case (line, 0) => s"$line,Comments"
+      case (line, 0) => s"$line,Comments" // Add header
       case (line, _) =>
-        val parts = line.split(",")
-        if (parts.length < 8) line // skip invalid lines
-        else {
-          val summary = parts(7)
-          val evaluation = parts(8).toFloat
-          val comments = (summary, evaluation) match {
-            case ("super", e) if e >= 3 => "Excellent"  
-            case ("super", _) => "Good but inconsistent"
-            case (_, e) if e >= 2 => "Promising"  
-            case _ => "Needs Improvement"
+
+        val parts = line.trim.split("\\s+")
+        if (parts.length < 8) {
+          println(s"Skipping line due to insufficient fields. Found ${parts.length}")
+          line
+        } else {
+          val summary = parts(6).trim.toLowerCase
+          val evaluationOpt = Try(parts(7).toFloat).toOption
+          println(s"Summary: '$summary', Evaluation raw: '${parts(7)}'")
+
+          val comments = evaluationOpt match {
+            case Some(evaluation) =>
+              val comment = (summary, evaluation) match {
+                case ("super", e) if e >= 3 => "Excellent"
+                case ("super", _)           => "Good but inconsistent"
+                case (_, e) if e >= 2       => "Promising"
+                case _                      => "Needs Improvement"
+              }
+              println(s"Evaluation: $evaluation => Comment: $comment")
+              comment
+            case None =>
+              println(s"Invalid float: ${parts(7)}")
+              "Invalid Evaluation"
           }
+
           s"$line,$comments"
         }
+
     }
 
     Files.write(Paths.get("data7.txt"), outputLines.mkString("\n").getBytes)
