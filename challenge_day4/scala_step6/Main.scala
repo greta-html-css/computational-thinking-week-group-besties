@@ -4,11 +4,11 @@ import scala.util.Try
 
 object Main {
   def main(args: Array[String]): Unit = {
-    val filePath = "/Users/gretapfeiffer/Desktop/computational-thinking-week-group-besties/challenge_day4/testdata/data6.txt"
+    val filePath = "/Users/gretapfeiffer/Desktop/computational-thinking-week-group-besties/challenge_day4/Rust_step5/data6.txt"
     val lines = scala.io.Source.fromFile(filePath).getLines().toList
 
     val outputLines = lines.zipWithIndex.map {
-      case (line, 0) => s"$line,Comments" // Add header
+      case (line, 0) => s"$line,Comments"
       case (line, _) =>
 
         val parts = line.trim.split("\\s+")
@@ -40,11 +40,6 @@ object Main {
 
     }
 
-    Files.write(Paths.get("test_data7.txt"), outputLines.mkString("\n").getBytes)
-  }
-}
-
-
-    Files.write(Paths.get("test_data7.txt"), outputLines.mkString("\n").getBytes)
+    Files.write(Paths.get("data7.txt"), outputLines.mkString("\n").getBytes)
   }
 }
