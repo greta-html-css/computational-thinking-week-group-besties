@@ -49,7 +49,7 @@ for _, line in ipairs(lines) do
 end
 
 -- Write data to `data5.txt`
-local out, err = io.open("challenge_day4/Lua_step4/data5.csv", "w")
+local out, err = io.open("data5.csv", "w")
 if not out then
     print("Error: " .. tostring(err))
     os.exit(1) -- stop the script
